@@ -2,6 +2,7 @@
 title: Vim 基础使用按键
 aliases:
   - usevim
+  - 编程/usevim
 ---
 
 ## 一、Vim 的三种常用模式
@@ -139,4 +140,3 @@ aliases:
 - `d` 删除，`y` 复制，`p` 粘贴。
 - `u` 撤销，`Ctrl + r` 重做。
 - `:w` 保存，`:q` 退出，`:wq` 保存并退出。
-

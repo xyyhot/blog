@@ -1,6 +1,7 @@
 ---
 aliases:
   - cppnotes
+  - 编程/cppnotes
 title: C++ 基础与算法全笔记
 ---
 
