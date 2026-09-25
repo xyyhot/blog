@@ -1,6 +1,4 @@
 ---
-aliases:
-  - csclassbase
 slug: computer-basics/csclassbase
 title: 计算机速成课笔记
 ---

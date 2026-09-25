@@ -1,6 +1,4 @@
 ---
-aliases:
-  - core-of-code
 slug: programming/core-of-code
 title: 编程的核心
 ---

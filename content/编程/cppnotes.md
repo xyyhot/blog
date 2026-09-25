@@ -1,6 +1,4 @@
 ---
-aliases:
-  - cppnotes
 slug: programming/cppnotes
 title: C++ 基础与算法全笔记
 ---

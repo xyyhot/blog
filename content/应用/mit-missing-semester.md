@@ -1,6 +1,4 @@
 ---
-aliases:
-  - mit-missing-semester
 slug: applications/mit-missing-semester
 title: MIT Missing Semester笔记
 ---

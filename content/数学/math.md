@@ -1,6 +1,4 @@
 ---
-aliases:
-  - math
 slug: mathematics/math
 title: 数学
 ---

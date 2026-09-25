@@ -1,5 +1,4 @@
 ---
-title: Vim 基础使用按键
 aliases:
   - usevim
 slug: programming/usevim

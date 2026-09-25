@@ -1,6 +1,4 @@
 ---
-aliases:
-  - git-command
 slug: applications/git-command
 title: Git 常用命令
 ---
