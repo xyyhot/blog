@@ -208,17 +208,17 @@ plugins:
     options:
       provider: giscus
       options:
-        repo: TODO:username/repo-name
+        repo: xyyhot/blog
         repoId: TODO:your-repo-id
         category: Announcements
         categoryId: TODO:your-category-id
-        mapping: url
+        mapping: pathname
         strict: true
         reactionsEnabled: true
         inputPosition: bottom
         lightTheme: light
         darkTheme: dark
-        lang: en
+        lang: zh-CN
     layout:
       position: afterBody
       priority: 10
