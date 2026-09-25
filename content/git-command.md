@@ -1,4 +1,8 @@
-# git常用命令
+---
+title: Git 常用命令
+---
+
+# Git 常用命令
 ## 三步走
 
 ```bash
@@ -79,4 +83,3 @@ git restore --staged <文件名>    # 取消暂存
 git reset --soft HEAD~1           # 撤销提交，保留修改
 git reset --hard HEAD~1           # 撤销提交并删除修改，谨慎使用
 ```
-
