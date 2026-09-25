@@ -1,4 +1,6 @@
 ---
+aliases:
+  - csclassbase
 title: 计算机速成课笔记
 ---
 [公开分享版本【计算机科学速成课】 笔记](https://shimo.im/docs/PJAUY30F1uYksv0h)

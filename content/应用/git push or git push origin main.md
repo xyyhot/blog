@@ -1,4 +1,6 @@
 ---
+aliases:
+  - git-push-or-git-push-origin-main
 title: git push和git push origin main之间的区别
 ---
 

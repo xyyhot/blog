@@ -1,4 +1,6 @@
 ---
+aliases:
+  - cppnotes
 title: C++ 基础与算法全笔记
 ---
 

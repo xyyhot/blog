@@ -1,4 +1,6 @@
 ---
+aliases:
+  - git-command
 title: Git 常用命令
 ---
 

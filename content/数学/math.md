@@ -1,4 +1,6 @@
 ---
+aliases:
+  - math
 title: 数学
 ---
 # 3Blue1Brown 数学核心视界笔记：微积分与线性代数的本质

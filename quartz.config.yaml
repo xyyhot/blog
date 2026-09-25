@@ -144,6 +144,11 @@ plugins:
     enabled: true
   - source: "@quartz-community/explorer"
     enabled: true
+    options:
+      title: 目录
+      folderClickBehavior: collapse
+      folderDefaultState: collapsed
+      useSavedState: true
     layout:
       position: left
       priority: 50
@@ -209,9 +214,9 @@ plugins:
       provider: giscus
       options:
         repo: xyyhot/blog
-        repoId: TODO:your-repo-id
+        repoId: R_kgDOUqil3w
         category: Announcements
-        categoryId: TODO:your-category-id
+        categoryId: DIC_kwDOUQil384DGW71
         mapping: pathname
         strict: true
         reactionsEnabled: true

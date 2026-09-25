@@ -1,4 +1,6 @@
 ---
+aliases:
+  - linux-command
 title: linux常用指令
 ---
 
