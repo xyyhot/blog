@@ -1,6 +1,10 @@
 ---
-title: Welcome to Quartz
+title: 我的学习笔记
+description: 学习笔记、编程资料与备考总结
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+# 我的学习笔记
+
+这里收录我的编程、计算机基础、数学和英语学习笔记。
+
+可以使用左侧目录、搜索和标签浏览全部内容。
