@@ -1,7 +1,6 @@
 ---
-aliases:
-  - usevim
 slug: programming/usevim
+title: vim操作
 ---
 
 ## 一、Vim 的三种常用模式
