@@ -1,4 +1,4 @@
-
+# MIT Missing Semester笔记
 [计算机教育中缺失的一课 · the missing semester of your cs education](https://missing-semester-cn.github.io/)
 
 > 课程主页：https://missing.csail.mit.edu/2026
