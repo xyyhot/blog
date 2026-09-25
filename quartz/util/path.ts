@@ -7,6 +7,7 @@ export {
   isAbsoluteURL,
   getFullSlug,
   slugifyFilePath,
+  slugifyPath,
   simplifySlug,
   joinSegments,
   endsWith,

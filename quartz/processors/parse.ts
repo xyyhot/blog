@@ -7,7 +7,7 @@ import { Root as HTMLRoot } from "hast"
 import { MarkdownContent, ProcessedContent } from "../plugins/vfile"
 import { PerfTimer } from "../util/perf"
 import { read } from "to-vfile"
-import { FilePath, QUARTZ, slugifyFilePath } from "../util/path"
+import { FilePath, FullSlug, QUARTZ, slugifyFilePath, slugifyPath } from "../util/path"
 import path from "path"
 import workerpool, { Promise as WorkerPromise } from "workerpool"
 import { QuartzLogger } from "../util/log"
@@ -106,6 +106,13 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
 
         const ast = processor.parse(file)
         const newAst = await processor.run(ast, file)
+
+        // Allow a note to keep a localized source path while publishing at an
+        // explicit URL slug, e.g. `slug: programming/core-of-code`.
+        const customSlug = file.data.frontmatter?.slug
+        if (typeof customSlug === "string" && customSlug.trim().length > 0) {
+          file.data.slug = slugifyPath(customSlug.trim()) as FullSlug
+        }
         res.push([newAst, file])
 
         if (argv.verbose) {
@@ -159,6 +166,9 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
   if (concurrency === 1) {
     try {
       const mdRes = await createFileParser(ctx, fps)(createMdProcessor(ctx))
+      ctx.allSlugs = Array.from(
+        new Set([...ctx.allSlugs, ...mdRes.map(([, file]) => file.data.slug).filter(Boolean)]),
+      ) as typeof ctx.allSlugs
       res = await createMarkdownParser(ctx, mdRes)(createHtmlProcessor(ctx))
     } catch (error) {
       log.end()
@@ -196,10 +206,22 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
         }),
       )
 
+      ctx.allSlugs = Array.from(
+        new Set([
+          ...ctx.allSlugs,
+          ...mdResults.flat().map(([, file]) => file.data.slug).filter(Boolean),
+        ]),
+      ) as typeof ctx.allSlugs
+
+      const htmlCtx: WorkerSerializableBuildCtx = {
+        ...serializableCtx,
+        allSlugs: ctx.allSlugs,
+      }
+
       const markdownToHtmlPromises: WorkerPromise<ProcessedContent[]>[] = []
       processedFiles = 0
       for (const mdChunk of mdResults) {
-        markdownToHtmlPromises.push(pool.exec("processHtml", [serializableCtx, mdChunk]))
+        markdownToHtmlPromises.push(pool.exec("processHtml", [htmlCtx, mdChunk]))
       }
       const results: ProcessedContent[][] = await Promise.all(
         markdownToHtmlPromises.map(async (promise) => {

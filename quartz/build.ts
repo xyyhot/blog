@@ -288,6 +288,12 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
     const markdownContent = Array.from(contentMap.values())
       .filter((file) => file.type === "markdown")
       .map((file) => file.content)
+    ctx.allSlugs = Array.from(
+      new Set([
+        ...ctx.allSlugs,
+        ...markdownContent.map(([, file]) => file.data.slug).filter(Boolean),
+      ]),
+    ) as typeof ctx.allSlugs
     reportSlugCollisions(markdownContent)
     let processedFiles = filterContent(ctx, markdownContent)
 

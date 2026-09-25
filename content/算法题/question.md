@@ -1,6 +1,7 @@
 ---
 aliases:
   - question
+slug: algorithms/question
 title: 这是我在刷算法题中遇到的一些不理解的题意
 ---
 乒乓球十一分制的意思

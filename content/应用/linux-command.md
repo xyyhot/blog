@@ -1,6 +1,7 @@
 ---
 aliases:
   - linux-command
+slug: applications/linux-command
 title: linux常用指令
 ---
 

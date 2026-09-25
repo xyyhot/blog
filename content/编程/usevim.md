@@ -2,7 +2,7 @@
 title: Vim 基础使用按键
 aliases:
   - usevim
-  - 编程/usevim
+slug: programming/usevim
 ---
 
 ## 一、Vim 的三种常用模式
