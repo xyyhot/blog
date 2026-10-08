@@ -1,5 +1,5 @@
 ---
-slug: programming/usevim
+slug: applications/usevim
 title: vim操作
 ---
 
